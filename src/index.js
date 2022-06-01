@@ -22,11 +22,12 @@ reloadBtn.addEventListener('click', () => {
 // Important variables
 const elements = []
 const arr = [];
+const commentsArr = []
 let counting = true;
 let isTru;
 
 //important functions
-function sliceIntoChunks(arrs, chunkSize) {
+export function sliceIntoChunks(arrs, chunkSize) {
     const res = [];
     for (let i = 0; i < arrs.length; i += chunkSize) {
         const chunk = arrs.slice(i, i + chunkSize);
@@ -61,6 +62,26 @@ function addAllContent(num, count) {
     });
     return elements[num].innerHTML = count + ' ';
 }
+
+const comments = (ref(db, 'comments/'));
+onValue(comments, (snapshot) => {
+    snapshot.forEach((childsnapshot) => {
+        const childData = childsnapshot.val()
+        commentsArr.push(childData)
+    })
+    const allComments = sliceIntoChunks(commentsArr, 1)
+    let commentAmount = allComments.length
+  
+        let list = document.getElementById("commentSection");
+  
+        allComments.forEach((item)=>{
+            let li = document.createElement("li");
+            li.classList.add('comment')
+            li.innerText = JSON.stringify(item);
+            list.appendChild(li);
+        })
+})
+
 
 //getting the first node parent in the database
 const answers = (ref(db, 'answers/'));
