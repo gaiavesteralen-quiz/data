@@ -58,13 +58,14 @@
    background-color: rgb(255, 255, 255);
    height: 500px;
    width: 300px;
+   padding: 10px;
    border: 1px solid #ddd
   }
 
   .comment {
    width: 90%;
    margin: 0 auto;
-   line-height: 30px;
+   line-height: 40px;
    border-bottom: 1px solid #ddd;
    list-style: none;
   }

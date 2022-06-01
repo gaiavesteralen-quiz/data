@@ -70,18 +70,16 @@ onValue(comments, (snapshot) => {
         commentsArr.push(childData)
     })
     const allComments = sliceIntoChunks(commentsArr, 1)
-    let commentAmount = allComments.length
-  
-        let list = document.getElementById("commentSection");
-  
-        allComments.forEach((item)=>{
-            let li = document.createElement("li");
-            li.classList.add('comment')
-            li.innerText = JSON.stringify(item);
-            list.appendChild(li);
-        })
+    let list = document.getElementById("commentSection");
+    allComments.forEach((item)=>{
+        let itemString = JSON.stringify(item)
+        let itemFiltered = itemString.replace(/"answer"|\:|\[|\{|\"|\}|\]|:/g, '')
+        let li = document.createElement("li");
+        li.classList.add('comment')
+        li.innerText = itemFiltered
+        list.appendChild(li);
+    })
 })
-
 
 //getting the first node parent in the database
 const answers = (ref(db, 'answers/'));
@@ -161,5 +159,7 @@ onValue(answers, (snapshot) => {
         goOffline(db)
     }
 });
+
+
 
 
