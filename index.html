@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="stylesheet" href="stylesheets/globals.css">
+    <link rel="stylesheet" href="stylesheets/typography.css">
+    <link rel="stylesheet" href="stylesheets/grid.css">
+    <link rel="stylesheet" href="stylesheets/orbit.css">
+    <link rel="stylesheet" href="stylesheets/app.css">
+	  <link rel="stylesheet" href="responsive-tables.css">
+	  <script src="javascripts/jquery.min.js"></script>
+    <title>Gaias Quiz Data</title>
+</head>
+<!--<div id="description">
+    <h3>Quiz Data</h3>
+</div>-->
+
+
+<main>
+  <div class="jumbotron">
+    <h2>Quiz Tall</h2>
+  </div>
+    <table class="responsive">
+        <tbody>
+          <tr>
+            <th id="th">Gaias Quiz</th>
+            <th id="numberOfPlayers"><div class="spinning">⚙︎ - spillere😁</div></th>
+            <th>Svar alternativer:</th>
+            <th>Antall svar:</th>
+          </tr>
+          <tr>
+            <td>Spm 1</td>
+            <td>Hvordan vil du kategorisere totalopplevelsen</td>
+            <td>Veldig bra | Middels bra | Dårlig | Veldig dårlig</td>
+            <td><span data class="spinning">⚙︎ Veldig bra | ⚙︎ middels bra | ⚙︎ Dårlig | ⚙︎ Veldig dårlig.</span></td>
+          </tr>
+          <tr>
+            <td>Spm 2</td>
+            <td>Hva likte du best i utstillingen?</td>
+            <td>kommer snart</td>
+            <td><span data class="spinning">⚙︎ </span>kommer snart.</td>
+          </tr>
+          <tr>
+            <td>Spm 3</td>
+            <td>Viste du hvor du skulle gå?</td>
+            <td>Logiskt oppsett | Jeg skjønte delvis | Jeg var usikker på hvor det startet | Jeg savnet følgende: kommentar boks</td>
+            <td><span data>⚙︎ Logiskt oppsett | ⚙︎ Jeg skjønte delvis | ⚙︎ Jeg var usikker på hvor det startet | ⚙︎ jeg savnet følgende: kommentar boks</span></td>
+          </tr>
+          <tr>
+            <td>Spm 4</td>
+            <td>Hva savnet du i utstillingen til Gaia Vesterålen?</td>
+            <td>Mer aktiviteter | Flere spill | Mer historie | En guide | Mer informasjonsmatriell</td>
+            <td><span data>⚙︎ Mer aktiviteter | ⚙︎ Flere spill | ⚙︎ Mer historie | ⚙︎ En guide | ⚙︎ Mer informasjonsmatriell</span></td>
+          </tr>
+          <tr>
+            <td>Spm 5</td>
+            <td>Ville du likt å kjøpe souvenirer fra utstillingen</td>
+            <td>Ja | Nei</td>
+            <td><span data>⚙︎ Ja | ⚙︎ Nei</span></td>
+          </tr>
+          <tr>
+            <td>Spm 6</td>
+            <td>...</td>
+            <td>... | ...</td>
+            <td><span data>⚙︎ ... | ⚙︎ ...</span></td>
+          </tr>
+          </tr>
+          <tr>
+            <td>Spm 7</td>
+            <td>...</td>
+            <td>... | ...</td>
+            <td><span data>⚙︎ ... | ⚙︎ ...</span></td>
+          </tr>
+          <tr>
+            <td>Spm 8</td>
+            <td>...</td>
+            <td>... | ...</td>
+            <td><span data>⚙︎ ... | ⚙︎ ...</span></td>
+          </tr>
+          <tr>
+            <td>Spm 9</td>
+            <td>...</td>
+            <td>... | ...</td>
+            <td><span data>⚙︎ ... | ⚙︎ ...</span></td>
+          </tr>
+          <tr>
+            <td>Spm 10</td>
+            <td>...</td>
+            <td>... | ...</td>
+            <td><span data>⚙︎ ... | ⚙︎ ...</span></td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="jumbotron">
+        <h2>Kommentarer:</h2>
+        <div id="commentSection" height="500px">
+          <ul id="comments"></ul>
+        </div>
+        <button type="button" id="reload-btn" class='btn btn-lg btn-info'>Hent data</button>
+      </div>
+      <div class="alert alert-info" role="alert">
+        <strong>Ops!</strong> enda i utvikling.
+      </div>
+    <script src="main.js"></script>
+</main>
+</html>
+
