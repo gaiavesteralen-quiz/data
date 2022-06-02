@@ -48,7 +48,7 @@ const counter = (array, num, count) => {
         a[num] == 3 ? count[2] += 1 : 0
         a[num] == 4 ? count[3] += 1 : 0
         a[num] == 5 ? count[4] += 1 : 0
-        a[num] == 6 ? count[4] += 1 : 0
+        a[num] == 6 ? count[5] += 1 : 0
     }
 }
 
