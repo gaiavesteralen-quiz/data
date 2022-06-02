@@ -21,12 +21,27 @@ table td, table th { padding: 9px 20px 9px 5px; text-align: left; }
 	width: 15%;
 }
 
+main {
+	background-color: #e9ecef;
+}
+
+div.table-wrapper {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.responsive {
+	width: 90%;
+	margin: 0 auto;
+}
+
 /* Mobile */
 @media only screen and (max-width: 767px) {
 	
 	table.responsive {
 		 margin-bottom: 0; 
 		 text-align: left;
+
 	}
 	
 	.pinned { position: absolute; left: 0; top: 0; background: #fff; width: 30%; overflow: hidden; overflow-x: scroll; border-right: 1px solid #ccc; border-left: 1px solid #ccc; }
@@ -34,11 +49,11 @@ table td, table th { padding: 9px 20px 9px 5px; text-align: left; }
 	.pinned table th, .pinned table td { white-space: nowrap; }
 	.pinned td:last-child { border-bottom: 0; }
 	
-	div.table-wrapper { position: relative; margin-bottom: 0px; overflow: hidden; border-right: 1px solid #ccc; }
+	div.table-wrapper { position: relative; margin-bottom: 0px; overflow: hidden; border-right: 1px solid #ccc; width: 90%; margin: 0 auto; }
 	div.table-wrapper div.scrollable { margin-left: 30%; }
 	div.table-wrapper div.scrollable { overflow: scroll; overflow-y: hidden; }	
 	
-	table.responsive td, table.responsive th { position: relative; white-space: nowrap; overflow: hidden; }
+	table.responsive td, table.responsive th { position: relative; white-space: pre-wrap; min-width: 300px; overflow: hidden; }
 	table.responsive th:first-child, table.responsive td:first-child, table.responsive td:first-child, table.responsive.pinned td { display: none; }
 	
 }

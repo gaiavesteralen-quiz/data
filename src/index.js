@@ -13,11 +13,14 @@ const app = initializeApp(firebaseConfig);
 const db = getDatabase();
 goOnline(db)
 
-const reloadBtn = document.getElementById('reload-btn');
+//const reloadBtn = document.getElementById('reload-btn');
+const reloadBtn = document.querySelectorAll('[buttons]')
 //"fetch data"
-reloadBtn.addEventListener('click', () => {
-    location.reload();
-})
+reloadBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+        location.reload();
+    })
+});
 
 // Important variables
 const elements = []
@@ -70,7 +73,7 @@ onValue(comments, (snapshot) => {
         commentsArr.push(childData)
     })
     const allComments = sliceIntoChunks(commentsArr, 1)
-    let list = document.getElementById("commentSection");
+    let list = document.getElementById("comments");
     allComments.forEach((item)=>{
         let itemString = JSON.stringify(item)
         let itemFiltered = itemString.replace(/"answer"|\:|\[|\{|\"|\}|\]|:/g, '')
@@ -132,7 +135,7 @@ onValue(answers, (snapshot) => {
 
         let countQSix = [0, 0, 0, 0, 0];
         counter(arr, 5, countQSix);
-        const q6 = strongIndex(countQSix[0]) + " ... | " + strongIndex(countQSix[1]) + ' ...'
+        const q6 = strongIndex(countQSix[0]) + " Vesterålen | " + strongIndex(countQSix[1]) + ' Øksnes | ' + strongIndex(countQSix[2]) + ' Miljø og klima | ' + strongIndex(countQSix[3]) + ' Gjernbruk og resirkulering'
         addAllContent(5, q6)
 
         let countQSeven = [0, 0, 0 ,0, 0];

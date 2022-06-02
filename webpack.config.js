@@ -1,9 +1,16 @@
+const path = require('path');
+
 module.exports = {
     mode: 'production',
     watch: true,
-    entry: ['./src/index.js', './src/firebase.js', './src/responsive-tables.js', './src/comments.js'],
+    entry: ['./src/index.js', './src/firebase.js', './src/responsive-tables.js',],
     output: {
-      filename: 'main.js',
+      filename: '[name].bundle.js',
       path: __dirname + '/dist',
     },
+    /*optimization: {
+      splitChunks: {
+        chunks: 'all',
+      }
+    }*/
   };
