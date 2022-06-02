@@ -15,6 +15,7 @@ goOnline(db)
 
 //const reloadBtn = document.getElementById('reload-btn');
 const reloadBtn = document.querySelectorAll('[buttons]')
+const commentHeader = document.getElementById('numComments');
 //"fetch data"
 reloadBtn.forEach(btn => {
     btn.addEventListener('click', () => {
@@ -74,6 +75,7 @@ onValue(comments, (snapshot) => {
     })
     const allComments = sliceIntoChunks(commentsArr, 1)
     let list = document.getElementById("comments");
+    commentHeader.innerText = allComments.length
     allComments.forEach((item)=>{
         let itemString = JSON.stringify(item)
         let itemFiltered = itemString.replace(/"answer"|\:|\[|\{|\"|\}|\]|:/g, '')
@@ -135,7 +137,7 @@ onValue(answers, (snapshot) => {
 
         let countQSix = [0, 0, 0, 0, 0];
         counter(arr, 5, countQSix);
-        const q6 = strongIndex(countQSix[0]) + " Vesterålen | " + strongIndex(countQSix[1]) + ' Øksnes | ' + strongIndex(countQSix[2]) + ' Miljø og klima | ' + strongIndex(countQSix[3]) + ' Gjernbruk og resirkulering'
+        const q6 = strongIndex(countQSix[0]) + " Vesterålen | " + strongIndex(countQSix[1]) + ' Øksnes | ' + strongIndex(countQSix[2]) + ' Miljø og klima | ' + strongIndex(countQSix[3]) + ' Gjenbruk og resirkulering'
         addAllContent(5, q6)
 
         let countQSeven = [0, 0, 0 ,0, 0];
