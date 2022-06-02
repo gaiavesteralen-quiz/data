@@ -117,9 +117,10 @@ onValue(answers, (snapshot) => {
         const q1 = strongIndex(countQOne[0]) + ' veldig bra' + ' | ' + strongIndex(countQOne[1]) + ' Bra' + ' | ' + strongIndex(countQOne[2]) + ' Middels' + ' | ' + strongIndex(countQOne[3]) + ' Dårlig | ' + strongIndex(countQOne[4]) + ' Veldig dårlig'
         addAllContent(0, q1);
 
-        let countQTwo = [0];
+        let countQTwo = [0, 0, 0, 0, 0];
         counter(arr, 1, countQTwo);
-        addAllContent(1, strongIndex(countQTwo))
+        const q2 = strongIndex(countQTwo[0]) + ' kommer snart | ' + strongIndex(countQTwo[1]) + ' kommer snart | ' + strongIndex(countQTwo[2]) + ' kommer snart | ' + strongIndex(countQTwo[3]) + ' kommer snart';
+        addAllContent(1, q2)
 
         let countQThree = [0, 0, 0, 0, 0];
         counter(arr, 2, countQThree);
