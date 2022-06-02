@@ -48,6 +48,7 @@ const counter = (array, num, count) => {
         a[num] == 3 ? count[2] += 1 : 0
         a[num] == 4 ? count[3] += 1 : 0
         a[num] == 5 ? count[4] += 1 : 0
+        a[num] == 6 ? count[4] += 1 : 0
     }
 }
 
@@ -113,7 +114,7 @@ onValue(answers, (snapshot) => {
 
         let countQOne = [0, 0, 0, 0, 0];
         counter(arr, 0, countQOne);
-        const q1 = strongIndex(countQOne[0]) + ' veldig bra' + ' | ' + strongIndex(countQOne[1]) + ' Middels bra' + ' | ' + strongIndex(countQOne[2]) + ' Dårlig' + ' | ' + strongIndex(countQOne[3]) + ' Veldig dårlig.'
+        const q1 = strongIndex(countQOne[0]) + ' veldig bra' + ' | ' + strongIndex(countQOne[1]) + ' Bra' + ' | ' + strongIndex(countQOne[2]) + ' Middels' + ' | ' + strongIndex(countQOne[3]) + ' Dårlig | ' + strongIndex(countQOne[4]) + ' Veldig dårlig'
         addAllContent(0, q1);
 
         let countQTwo = [0];
@@ -125,9 +126,9 @@ onValue(answers, (snapshot) => {
         const q3 = strongIndex(countQThree[0]) + " Logiskt oppsett | " + strongIndex(countQThree[1]) + ' Jeg Skjønte delvis | ' + strongIndex(countQThree[2]) + ' Jeg var usikker på hvor det startet | ' + strongIndex(countQThree[3]) + ' Jeg savnet følgende: kommentar boks'
         addAllContent(2, q3);
 
-        let countQFour = [0, 0, 0, 0, 0];
+        let countQFour = [0, 0, 0, 0, 0, 0];
         counter(arr, 3, countQFour);
-        const q4 = strongIndex(countQFour[0]) + " Mer aktiviteter | " + strongIndex(countQFour[1]) + ' Flere spill | ' + strongIndex(countQFour[2]) + ' Mer historie | ' + strongIndex(countQFour[3]) + ' En guide | ' + strongIndex(countQFour[4]) + ' Mer informasjonsmatriell'
+        const q4 = strongIndex(countQFour[0]) + " Mer aktiviteter | " + strongIndex(countQFour[1]) + ' Flere spill | ' + strongIndex(countQFour[2]) + ' Mer historie | ' + strongIndex(countQFour[3]) + ' En guide | ' + strongIndex(countQFour[4]) + ' Mer informasjonsmatriell | ' + strongIndex(countQFour[5]) + ' Ingenting'
         addAllContent(3, q4)
 
         let countQFive = [0, 0, 0, 0, 0];
@@ -137,7 +138,7 @@ onValue(answers, (snapshot) => {
 
         let countQSix = [0, 0, 0, 0, 0];
         counter(arr, 5, countQSix);
-        const q6 = strongIndex(countQSix[0]) + " Vesterålen | " + strongIndex(countQSix[1]) + ' Øksnes | ' + strongIndex(countQSix[2]) + ' Miljø og klima | ' + strongIndex(countQSix[3]) + ' Gjenbruk og resirkulering'
+        const q6 = strongIndex(countQSix[0]) + " Vesterålen | " + strongIndex(countQSix[1]) + ' Øksnes | ' + strongIndex(countQSix[2]) + ' Miljø og klima | ' + strongIndex(countQSix[3]) + ' Gjenbruk og resirkulering | ' + strongIndex(countQSix[4]) + ' Ingenting'
         addAllContent(5, q6)
 
         let countQSeven = [0, 0, 0 ,0, 0];
