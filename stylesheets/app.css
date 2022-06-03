@@ -18,9 +18,9 @@
   }
 
   body { background: #f4f4f4; height: 100vh; }
-  .container { max-width: 740px; box-shadow: 0px 2px 5px rgba(0,0,0,0.25); background: #fff; margin: 0 auto; }
+  .container { max-width: 740px; box-shadow: 0px 2px 5px rgba(0,0,0,0.25); background: #D3FFE4; margin: 0 auto; }
   
-  p { color: #999; }
+  p { color: #D3FFE4; }
   
   h1 { margin: 20px 0 0; }
   h4.subhead { font-weight: lighter; color: #777; margin-bottom: 20px; }
@@ -43,6 +43,8 @@
    height: 100%;
    width: 100%;
    padding: 0;
+   background-color: #000F37;
+   color: #D3FFE4
   }
 
   #bottomjumbo {
@@ -54,22 +56,22 @@
   }
 
   #reload-btn {
-   width: 70vw;
+   width: 80vw;
    height: 50px;
-   margin: 9px auto 40px;
+   margin: 18px auto 40px;
    font-size: 14px;
   }
 
   .alert-info {
    margin-bottom: 0;
+   background-color: #D3FFE4;
+   width: 100vw;
   }
 
   ul {
-   border: 1px solid #ddd;
-   border-bottom: none;
    border-top: none;
    width: 100%;
-   background-color: white;
+   background-color: #000F37;
    padding: 10px;
    margin: 0;
    //overflow-x: scroll;
@@ -79,17 +81,30 @@
    height: 600px;
    width: 100%;
    margin: 0 auto;
-   border: 1px solid #ddd;
-   background-color: #fff;
+   border: 1px solid #D3FFE4;
+   background-color: #000F37;
    overflow-x: scroll;
+   border-radius: 5px;
   }
 
   .comment {
    width: 90%;
    line-height: 40px;
-   border-bottom: 1px solid #ddd;
+   border-bottom: 1px solid #D3FFE4;
    list-style: none;
    margin: 0 auto;
+  }
+
+  .btn-info {
+   background-color: #D3FFE4;
+   border: 1px solid #000f37;
+   color: #000f37;
+   transition: 0.3s;
+  }
+
+  .btn-info:hover {
+   background-color: #D3FFE4;
+   color: #1C1C1C;
   }
 
   @media only screen and (max-width: 450px) {
